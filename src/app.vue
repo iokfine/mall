@@ -1,5 +1,4 @@
 <style scoped>
-    @import 'styles/common.css';
 </style>
 <template>
     <div>
@@ -8,18 +7,5 @@
 </template>
 <script>
     export default {
-        data () {
-            return {
-            }
-        },
-        mounted () {
-
-        },
-        beforeDestroy () {
-
-        },
-        methods: {
-
-        }
     }
 </script>
