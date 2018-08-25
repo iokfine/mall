@@ -9,7 +9,7 @@ const routers = [
     {
         path: '/',
         meta: {
-            title: '电子竞技,没有休息'
+            title: 'iokfine'
         },
         component: (resolve) => require(['./views/index.vue'], resolve)
     },
