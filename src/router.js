@@ -5,6 +5,7 @@ export const loginRouter = {
     },
     component: (resolve) => require(['./views/hello.vue'], resolve)
 };
+
 const routers = [
     {
         path: '/',
