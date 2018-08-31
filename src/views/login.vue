@@ -1,48 +1,43 @@
 <template>
     <Row type="flex" justify="center" align="middle" class="login">
         <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
-            <Col style="width: 300px">
-                <Row class="header">
-                    <img src="../images/logo.png"/>
-                    <div class="description">深圳虎空网络有限公司</div>
-                </Row>
-                <Row>
-                    <FormItem prop="user">
-                        <Input type="text" v-model="formInline.user" placeholder="Username" size="large" clearable
-                               style="width: 300px">
-                        <span slot="prepend">
+        <Col style="width: 300px">
+            <Row class="header">
+                <img src="../images/logo.png" width="300" style="margin-top: 50px;"/>
+            </Row>
+            <Row>
+                <FormItem prop="user">
+                        <Input type="text" v-model="formInline.user" placeholder="Username" size="large" clearable style="width: 300px">
+                            <span slot="prepend">
                                 <Icon :size="18" type="person"></Icon>
                             </span>
                         </Input>
                     </FormItem>
-                    <FormItem prop="password">
-                        <Input type="password" v-model="formInline.password" placeholder="Password" size="large"
-                               clearable style="width: 300px">
-                        <span slot="prepend">
+                <FormItem prop="password">
+                        <Input type="password" v-model="formInline.password" placeholder="Password" size="large" clearable style="width: 300px">
+                            <span slot="prepend">
                                 <Icon :size="16" type="locked"></Icon>
                             </span>
                         </Input>
                     </FormItem>
-                </Row>
-                <Row type="flex" justify="space-between" style="margin-bottom: 10px">
-                    <Checkbox size="large">自动登录</Checkbox>
-                    <a class="forget-pass" @click="tips">忘记密码?</a>
-                </Row>
-                <Row>
-                    <FormItem>
-                        <Button type="primary" style="width: 300px" @click="handleSubmit('formInline')" size="large"
-                                long>Login
-                        </Button>
-                    </FormItem>
-                </Row>
-            </Col>
+            </Row>
+            <Row type="flex" justify="space-between" style="margin-bottom: 10px">
+                <Checkbox size="large">自动登录</Checkbox>
+                <a class="forget-pass" @click="tips">忘记密码</a>
+            </Row>
+            <Row>
+                <FormItem>
+                    <Button type="primary" style="width: 300px" @click="handleSubmit('formInline')" size="large" long>Login</Button>
+                </FormItem>
+            </Row>
+        </Col>
         </Form>
     </Row>
 
 </template>
 <script>
     export default {
-        data() {
+        data () {
             return {
                 formInline: {
                     user: '',
@@ -50,16 +45,11 @@
                 },
                 ruleInline: {
                     user: [
-                        {required: true, message: 'Please fill in the user name', trigger: 'blur'}
+                        { required: true, message: 'Please fill in the user name', trigger: 'blur' }
                     ],
                     password: [
-                        {required: true, message: 'Please fill in the password.', trigger: 'blur'},
-                        {
-                            type: 'string',
-                            min: 6,
-                            message: 'The password length cannot be less than 6 bits',
-                            trigger: 'blur'
-                        }
+                        { required: true, message: 'Please fill in the password.', trigger: 'blur' },
+                        { type: 'string', min: 6, message: 'The password length cannot be less than 6 bits', trigger: 'blur' }
                     ]
                 }
             }
@@ -74,7 +64,7 @@
                     }
                 })
             },
-            tips() {
+            tips(){
                 this.$Notice.info({
                     title: '别说了',
                     desc: '我爱你'
@@ -84,18 +74,11 @@
     }
 </script>
 <style scoped>
-    .login {
+    .login{
         height: 500px;
     }
-
-    .header {
-        margin-bottom: 30px;
+    .header{
         text-align: center;
     }
 
-    .description {
-        text-align: center;
-        font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-        font-size: 14px;
-    }
 </style>
