@@ -38,57 +38,12 @@
             </Carousel>
             <h1 style="margin-top: 20px">&nbsp;&nbsp;&nbsp;&nbsp;# Recommend article</h1>
             <ul class="recommend" style="list-style: none">
-                <li>
+                <li v-for="article in articles">
                     <Card dis-hover style="margin: 10px 10px">
-                        <h2>[情感]我喜欢你</h2>
-                        <strong>我其实真的超喜欢你的</strong>
+                        <h2><a>[{{article.type}}]</a>&nbsp;&nbsp;{{article.title}}</h2>
+                        <strong>{{article.content}}</strong>
                         <div style="margin-top: 20px">
-                            2018年9月2号
-                        </div>
-                    </Card>
-                </li>
-                <li>
-                    <Card dis-hover style="margin: 10px 10px">
-                        <h2>[情感]我喜欢你</h2>
-                        <strong>我其实真的超喜欢你的</strong>
-                        <div style="margin-top: 20px">
-                            2018年9月2号
-                        </div>
-                    </Card>
-                </li>
-                <li>
-                    <Card dis-hover style="margin: 10px 10px">
-                        <h2>[情感]我喜欢你</h2>
-                        <strong>我其实真的超喜欢你的</strong>
-                        <div style="margin-top: 20px">
-                            2018年9月2号
-                        </div>
-                    </Card>
-                </li>
-                <li>
-                    <Card dis-hover style="margin: 10px 10px">
-                        <h2>[情感]我喜欢你</h2>
-                        <strong>我其实真的超喜欢你的</strong>
-                        <div style="margin-top: 20px">
-                            2018年9月2号
-                        </div>
-                    </Card>
-                </li>
-                <li>
-                    <Card dis-hover style="margin: 10px 10px">
-                        <h2>[情感]我喜欢你</h2>
-                        <strong>我其实真的超喜欢你的</strong>
-                        <div style="margin-top: 20px">
-                            2018年9月2号
-                        </div>
-                    </Card>
-                </li>
-                <li>
-                    <Card dis-hover style="margin: 10px 10px">
-                        <h2>[情感]我喜欢你</h2>
-                        <strong>我其实真的超喜欢你的</strong>
-                        <div style="margin-top: 20px">
-                            2018年9月2号
+                            {{article.time}}
                         </div>
                     </Card>
                 </li>
@@ -114,6 +69,59 @@
         data() {
             return {
                 value2: 0,
+                articles: [
+                    {
+                        type: 'JAVA',
+                        title: '深入理解JVM',
+                        content: 'JVM的深入理解,java虚拟机的运行时内存的分配,以及java虚拟机的各种虚拟机的了解和发展史,更体现了强大的垃圾回收机制...',
+                        author: 'nicolas',
+                        time: '2018.09.01',
+                        url:''
+                    } , {
+                        type: 'JAVA',
+                        title: '深入理解JVM',
+                        content: 'JVM的深入理解,java虚拟机的运行时内存的分配,以及java虚拟机的各种虚拟机的了解和发展史,更体现了强大的垃圾回收机制...',
+                        author: 'nicolas',
+                        time: '2018.09.01',
+                        url:''
+                    } , {
+                        type: 'JAVA',
+                        title: '深入理解JVM',
+                        content: 'JVM的深入理解,java虚拟机的运行时内存的分配,以及java虚拟机的各种虚拟机的了解和发展史,更体现了强大的垃圾回收机制...',
+                        author: 'nicolas',
+                        time: '2018.09.01',
+                        url:''
+                    } , {
+                        type: 'JAVA',
+                        title: '深入理解JVM',
+                        content: 'JVM的深入理解,java虚拟机的运行时内存的分配,以及java虚拟机的各种虚拟机的了解和发展史,更体现了强大的垃圾回收机制...',
+                        author: 'nicolas',
+                        time: '2018.09.01',
+                        url:''
+                    } , {
+                        type: 'JAVA',
+                        title: '深入理解JVM',
+                        content: 'JVM的深入理解,java虚拟机的运行时内存的分配,以及java虚拟机的各种虚拟机的了解和发展史,更体现了强大的垃圾回收机制...',
+                        author: 'nicolas',
+                        time: '2018.09.01',
+                        url:''
+                    } , {
+                        type: 'JAVA',
+                        title: '深入理解JVM',
+                        content: 'JVM的深入理解,java虚拟机的运行时内存的分配,以及java虚拟机的各种虚拟机的了解和发展史,更体现了强大的垃圾回收机制...',
+                        author: 'nicolas',
+                        time: '2018.09.01',
+                        url:''
+                    } , {
+                        type: 'JAVA',
+                        title: '深入理解JVM',
+                        content: 'JVM的深入理解,java虚拟机的运行时内存的分配,以及java虚拟机的各种虚拟机的了解和发展史,更体现了强大的垃圾回收机制...',
+                        author: 'nicolas',
+                        time: '2018.09.01',
+                        url:''
+                    } ,
+
+                ]
             }
         },
         methods: {},
