@@ -25,7 +25,25 @@ const RouterConfig = {
                     path: "/home",
                     name: 'home',
                     meta: {title: 'home'},
-                    component: (resolve) => require(['./views/front/home.vue'], resolve),
+                    component: (resolve) => require(['./views/pages/home.vue'], resolve),
+                },
+                {
+                    path: "/essay",
+                    name: 'essay',
+                    meta: {title: 'Essay'},
+                    component: (resolve) => require(['./views/pages/essay.vue'], resolve),
+                },
+                {
+                    path: "/aboutMe",
+                    name: 'aboutMe',
+                    meta: {title: 'about me'},
+                    component: (resolve) => require(['./views/pages/aboutMe.vue'], resolve),
+                },
+                {
+                    path: "/advice",
+                    name: 'advice',
+                    meta: {title: 'advice'},
+                    component: (resolve) => require(['./views/pages/advice.vue'], resolve),
                 }
             ]
         },
