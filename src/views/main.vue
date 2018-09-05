@@ -25,25 +25,30 @@
     <Layout>
         <Header class="header-color">
             <Row type="flex" class="content-pozition-center header-title-font">
-                <Col span="4" style="align-items: center;display: flex;justify-content: center;">
-                    <img src="../images/logo_main.png" style="height: 36px;"/>
+                <Col span="4" style="display: flex;justify-content: center;align-items: center">
+                    <img src="../images/logo_main.png" style="height: 36px;cursor:pointer"/>
                 </Col>
                 <Col span="2">
-                    <router-link to="/" style="">Home</router-link>
+                    <router-link :to="{name:'home'}">Home</router-link>
                 </Col>
                 <Col span="2">
-                    <router-link to="/login" style="">Essay</router-link>
+                    <router-link :to="{name:'essay'}">Essay</router-link>
                 </Col>
                 <Col span="2">
-                    <router-link to="/login" style="">About Me</router-link>
+                    <router-link :to="{name:'aboutMe'}">About Me</router-link>
                 </Col>
                 <Col span="2">
-                    <router-link to="/login" style="">Advice</router-link>
+                    <router-link :to="{name:'advice'}">Advice</router-link>
                 </Col>
-                <Col span="7">
+                <Col span="2">
+                    <a href="https://github.com/iokfine/personal-website">
+                        <Icon type="logo-github"/>
+                        Github</a>
+                </Col>
+                <Col span="5">
                 </Col>
                 <Col span="5" style="display: flex;align-items: center;">
-                    <Input search enter-button placeholder="search content..." />
+                    <Input search enter-button placeholder="search content..."/>
                 </Col>
             </Row>
         </Header>
@@ -51,6 +56,7 @@
             <router-view @whichPage-ctpEvent="ctpEvent"></router-view>
         </Content>
         <Footer class="layout-footer-center">2017-2018 &copy; iokfine 世界改变代码!</Footer>
+        <BackTop></BackTop>
     </Layout>
 </template>
 <script>
