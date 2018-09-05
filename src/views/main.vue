@@ -19,35 +19,45 @@
         color: #657180;
         font-size: 14px;
     }
+    ul{
+        list-style:none;
+    }
+    ul>li{
+        float: left;
+        margin-right: 25px;
+    }
 
 </style>
 <template>
     <Layout>
         <Header class="header-color">
             <Row type="flex" class="content-pozition-center header-title-font">
-                <Col span="4" style="display: flex;justify-content: center;align-items: center">
+                <Col :md="4" :lg="3" style="display: flex;justify-content: center;align-items: center">
                     <img src="../images/logo_main.png" style="height: 36px;cursor:pointer"/>
                 </Col>
-                <Col span="2">
-                    <router-link :to="{name:'home'}">Home</router-link>
+                <Col :md="12" :lg="12">
+                    <ul>
+                        <li>
+                            <router-link :to="{name:'home'}">Home</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{name:'essay'}">Essay</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{name:'aboutMe'}">About Me</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{name:'advice'}">Advice</router-link>
+                        </li>
+                        <li>
+                            <a href="https://github.com/iokfine/personal-website">
+                            <Icon type="logo-github"/>
+                            Github</a>
+                        </li>
+                    </ul>
                 </Col>
-                <Col span="2">
-                    <router-link :to="{name:'essay'}">Essay</router-link>
-                </Col>
-                <Col span="2">
-                    <router-link :to="{name:'aboutMe'}">About Me</router-link>
-                </Col>
-                <Col span="2">
-                    <router-link :to="{name:'advice'}">Advice</router-link>
-                </Col>
-                <Col span="2">
-                    <a href="https://github.com/iokfine/personal-website">
-                        <Icon type="logo-github"/>
-                        Github</a>
-                </Col>
-                <Col span="5">
-                </Col>
-                <Col span="5" style="display: flex;align-items: center;">
+
+                <Col :md="5" :lg="4" style="display: flex;align-items: center;">
                     <Input search enter-button placeholder="search content..."/>
                 </Col>
             </Row>
