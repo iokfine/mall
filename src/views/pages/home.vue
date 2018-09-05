@@ -26,7 +26,7 @@
     <Row class="container">
         <Col span="17" class="content">
             <Carousel autoplay loop :autoplay-speed="4000" :radiusDot="true">
-                <CarouselItem v-for="image in rollingImages">
+                <CarouselItem v-for="(image,index) in rollingImages" :key="index">
                     <div class="demo-carousel">
                         <img v-bind:src="image.imageUrl" style="width: 100%">
                         <h1 style="color: white;position: absolute;bottom: 20px;left: 15px">{{image.desc}}</h1>
