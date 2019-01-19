@@ -2,7 +2,7 @@ let util = {
 
 };
 util.title = function (title) {
-    title = title ? title  : 'iokfine';
+    title = title ? title  : 'PATU';
     window.document.title = title;
 };
 

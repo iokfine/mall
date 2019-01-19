@@ -28,10 +28,10 @@ const RouterConfig = {
                     component: (resolve) => require(['./views/pages/home.vue'], resolve),
                 },
                 {
-                    path: "/essay",
-                    name: 'essay',
+                    path: "/detail",
+                    name: 'detail',
                     meta: {title: 'Essay'},
-                    component: (resolve) => require(['./views/pages/essay.vue'], resolve),
+                    component: (resolve) => require(['./views/pages/detail.vue'], resolve),
                 },
                 {
                     path: "/aboutMe",

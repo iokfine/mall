@@ -7,22 +7,26 @@
     }
 
     .header-color {
-        background-color: #fff;
+        background-color: #ffffff;
         border-bottom: #dddee1 1px solid;
     }
 
     .content-pozition-center {
         text-align: center;
+        width: 70%;
+        margin: 0 auto;
     }
 
     .header-title-font {
-        color: #657180;
+        color: #222;
         font-size: 14px;
     }
-    ul{
-        list-style:none;
+
+    ul {
+        list-style: none;
     }
-    ul>li{
+
+    ul > li {
         float: left;
         margin-right: 25px;
     }
@@ -30,43 +34,31 @@
 </style>
 <template>
     <Layout>
-        <Header class="header-color">
-            <Row type="flex" class="content-pozition-center header-title-font">
-                <Col :md="4" :lg="3" style="display: flex;justify-content: center;align-items: center">
-                    <img src="../images/logo_main.png" style="height: 36px;cursor:pointer"/>
-                </Col>
-                <Col :md="12" :lg="12">
-                    <ul>
-                        <li>
-                            <router-link :to="{name:'home'}">Home</router-link>
-                        </li>
-                        <li>
-                            <router-link :to="{name:'essay'}">Essay</router-link>
-                        </li>
-                        <li>
-                            <router-link :to="{name:'aboutMe'}">About Me</router-link>
-                        </li>
-                        <li>
-                            <router-link :to="{name:'advice'}">Advice</router-link>
-                        </li>
-                        <li>
-                            <a href="https://github.com/iokfine/personal-website">
-                            <Icon type="logo-github"/>
-                            Github</a>
-                        </li>
-                    </ul>
-                </Col>
-
-                <Col :md="5" :lg="4" style="display: flex;align-items: center;">
-                    <Input search enter-button placeholder="search content..."/>
-                </Col>
-            </Row>
-        </Header>
-        <Content>
-            <router-view @whichPage-ctpEvent="ctpEvent"></router-view>
-        </Content>
-        <Footer class="layout-footer-center">2017-2018 &copy; iokfine 世界改变代码!</Footer>
-        <BackTop></BackTop>
+        <div style="min-width: 1200px">
+            <Header class="header-color">
+                <Row type="flex" class="content-pozition-center header-title-font">
+                    <Col :lg="6" style="display: flex;justify-content: center;align-items: center">
+                        <img src="https://2019hk-image-server.oss-cn-shenzhen.aliyuncs.com/logo/putulogo.png"
+                             style="height: 36px;cursor:pointer"/>
+                    </Col>
+                    <Col :lg="6">
+                        <router-link :to="{name:'home'}" style="color: black;font-size: 16px">Product</router-link>
+                    </Col>
+                    <Col :lg="6">
+                        <router-link :to="{name:'aboutMe'}" style="color: black;font-size: 16px">About</router-link>
+                    </Col>
+                    <Col :lg="6" style="display: flex;justify-content: center;align-items: center">
+                        <img src="https://2019hk-image-server.oss-cn-shenzhen.aliyuncs.com/logo/cart7.png"
+                             style="height: 36px;cursor:pointer"/>
+                    </Col>
+                </Row>
+            </Header>
+            <Content>
+                <router-view @whichPage-ctpEvent="ctpEvent"></router-view>
+            </Content>
+            <Footer class="layout-footer-center">Copyright © 2019 Patu</Footer>
+            <BackTop></BackTop>
+        </div>
     </Layout>
 </template>
 <script>
