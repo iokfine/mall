@@ -34,20 +34,20 @@
 </style>
 <template>
     <Layout>
-        <div style="min-width: 1200px">
+        <div style="min-width: 1200px;max-width: 1980px">
             <Header class="header-color">
                 <Row type="flex" class="content-pozition-center header-title-font">
-                    <Col :lg="6" style="display: flex;justify-content: center;align-items: center">
+                    <Col span="6" style="display: flex;justify-content: center;align-items: center">
                         <img src="https://2019hk-image-server.oss-cn-shenzhen.aliyuncs.com/logo/putulogo.png"
                              style="height: 36px;cursor:pointer"/>
                     </Col>
-                    <Col :lg="6">
+                    <Col span="6">
                         <router-link :to="{name:'home'}" style="color: black;font-size: 16px">Product</router-link>
                     </Col>
-                    <Col :lg="6">
+                    <Col span="6">
                         <router-link :to="{name:'aboutMe'}" style="color: black;font-size: 16px">About</router-link>
                     </Col>
-                    <Col :lg="6" style="display: flex;justify-content: center;align-items: center">
+                    <Col span="6" style="display: flex;justify-content: center;align-items: center">
                         <img src="https://2019hk-image-server.oss-cn-shenzhen.aliyuncs.com/logo/cart7.png"
                              style="height: 36px;cursor:pointer"/>
                     </Col>

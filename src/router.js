@@ -30,29 +30,16 @@ const RouterConfig = {
                 {
                     path: "/detail",
                     name: 'detail',
-                    meta: {title: 'Essay'},
                     component: (resolve) => require(['./views/pages/detail.vue'], resolve),
                 },
                 {
                     path: "/aboutMe",
                     name: 'aboutMe',
-                    meta: {title: 'about me'},
+                    meta: {title: 'About'},
                     component: (resolve) => require(['./views/pages/aboutMe.vue'], resolve),
-                },
-                {
-                    path: "/advice",
-                    name: 'advice',
-                    meta: {title: 'advice'},
-                    component: (resolve) => require(['./views/pages/advice.vue'], resolve),
                 }
             ]
-        },
-        {
-            path: '/login',
-            name: 'login',
-            meta: {title: 'login'},
-            component: (resolve) => require(['./views/login.vue'], resolve)
-        },
+        } ,
         errorPages404,
     ]
 };

@@ -1,6 +1,5 @@
 <style scoped lang="less">
     .demo-carousel {
-        height: 700px;
         position: relative;
     }
 
@@ -35,8 +34,7 @@
                 <li v-for="upc in upcs" style="float:left;margin: 10px">
                     <a href="#" @click="toDetail(upc)">
                         <Card dis-hover>
-                            <img :src="upc.mainImage"
-                                 style="width: 270px"/>
+                            <img :src="upc.mainImage" style="width: 235px"/>
                             <h3 style="text-align: center;color: #2a2d32d6">{{upc.abbr}}</h3>
                         </Card>
                     </a>
@@ -65,18 +63,16 @@
             }
         },
         methods: {
-            toDetail(productId) {
-                console.log(productId+"--------------")
-                this.$router.push({name: 'detail', params: {id: productId}})
+            toDetail(upc) {
+                this.$router.push({name: 'detail', query: {product: upc.productUpcId}})
             },
             getProducts() {
-                axios.get('http://localhost:15500/sys/upc/query/home').then(response => {
+                axios.get('http://www.patudesign.com/sys/sys/upc/query/home').then(response => {
                     //console.log(response.data.result)
                     this.upcs = response.data.result
-                })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
+                }).catch(function (error) {
+                    console.log(error);
+                });
             }
         },
 
