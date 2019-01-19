@@ -1,7 +1,7 @@
 {
   "name": "patu",
   "version": "1.0.0",
-  "description": "Nicolas' website",
+  "description": "Patu Mall",
   "main": "index.js",
   "scripts": {
     "init": "webpack --progress --config webpack.dev.config.js",
